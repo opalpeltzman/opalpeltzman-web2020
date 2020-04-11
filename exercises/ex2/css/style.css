@@ -26,6 +26,7 @@ header a{
     padding-left: 17px;
 }
 .pic{
+    display: inline-block;
     padding-left: 20px;
 }
 body{
