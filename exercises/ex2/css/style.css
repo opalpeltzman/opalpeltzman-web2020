@@ -162,6 +162,7 @@ footer{
 }
 footer li{
     display: inline-block;
+    opacity: 40%;
 }
 .twitter{
     display: block;
