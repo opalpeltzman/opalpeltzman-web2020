@@ -23,7 +23,7 @@ header{
     background-color: #444444;
     padding-top: 1px;
 }
-header a{
+header .logo{
     display: block;
     background: url(../images/circle.png)  no-repeat;
     background-size: contain;
@@ -65,8 +65,25 @@ aside{
 }
 
 #navThirdPg{
+    position: relative;
     height: 165px;
     background: url(../images/navBackground.png) repeat-x;
+}
+button{
+    float: left;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+.button1{
+    top: 10px;
+    left: 10px;
+    background-color: lavender;
+}
+.button2{
+    top: 10px;
+    left: 60px;
+    background-color: thistle;
 }
 #navThirdPg ul{
     text-align: center;
@@ -94,19 +111,29 @@ ul a:active{
 
 #lay2Main{
     width: 100%;
+    height: 675px;
     background-color: #e6e6e6;
+    overflow: hidden;
 }
-.flexMain2{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 #lay2Main article{
-    margin: 50px 95px;
+    margin-top: 50px;
+    margin-left: 100px;
     height: 310px;
-    width: 215px;
+    width: 195px;
     background-color: #fefefe;
     border: 1px solid #a3a3a3;
+    position: relative;
+    float: left;
 }
+#lay2Main article p {
+    font-size: 190px;
+    position: relative;
+    top: 40px;
+    left: 30px;
+    color: lightsteelblue;;
+}
+
 main{
     height: 830px;
     width: 810px;
@@ -163,7 +190,9 @@ main > article {
     top: 20px;
 }
 
-
+.footer2{
+    margin-top: 0px;
+}
 footer{
     width: 100%;
     height: 72px;
@@ -178,14 +207,44 @@ footer{
 
 
 @media(max-width: 1200px){
+    header a{
+        float: left;
+    }
+    
+    #hamburger{
+        display: block;
+        background: url(../images/hamburger.png)  no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        margin-top: 20px; 
+        margin-left: 20px;
+        position: relative;
+        top: 2px;
+    }
+}
+@media(max-width: 1200px) and (min-width: 800px){
+    .logo{
+        position: relative;
+        left: 470px;
+    }
+}
+@media(max-width:1000px){
     #wrapper{
         width: 570px;
     }
-    footer{
+    .footer2{
         width: 570px;
         margin: auto;
     }
     #navThirdPg li{
         margin: 0px 50px;
     }
+    .logo{
+        position: relative;
+        left: 250px;
+    }  
 }
+
+
+
