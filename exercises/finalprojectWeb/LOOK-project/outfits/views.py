@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import LOOKform, closetform
 from .models import LOOK
 from django.http import JsonResponse
+from LOOK.allow import allowed_users
 
 # Create your views here.
 
@@ -15,8 +16,6 @@ def homepage(request):
 def profile(request):
     return render(request,'outfits/index.html')    
 
-# def newlook(request):
-#     return render(request,'outfits/createLook.html')
 
 @login_required(login_url='login')
 def stylist(request):
@@ -28,11 +27,10 @@ def camera(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['stylist'])
 def buildlook(request):
     return render(request,'outfits/stylistCreate.html')     
 
-# def createlook(request):
-#     return render(request,'outfits/createLook.html',{'form': LOOKform() })
 
 @login_required(login_url='login')
 def profileAfterchanges(request):
@@ -44,10 +42,8 @@ def createplusLook(request):
 
 @login_required(login_url='login')
 def updatelook(request):
-    # look = get_object_or_404(closet,Userid = request.user)
     if request.method == 'GET':
         form = LOOKform()
-        # return render(request, 'outfits/createLook.html', {'look': look ,'form':form})
         return render(request, 'outfits/createLook.html', {'form':form})
     else:
         try:
@@ -72,13 +68,16 @@ def image_upload_view(request):
         form = closetform(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            # Get the current instance object to display in the template
             img_obj = form.instance
             return render(request, 'outfits/upload.html', {'form': form, 'img_obj': img_obj})
     else:
         form = closetform()
     return render(request, 'outfits/upload.html', {'form': form})
 
+
+@login_required(login_url='login')
+def stylistceartLook(request):
+    return render(request, 'outfits/createLook.html')
 
 
 def send_json(request):
@@ -115,7 +114,7 @@ def send_json(request):
             "img": "../images/o6"
         }
     ]
-    # context = {'looks' : looks}
-    # return render(request, 'index.html',context)
+
 
     return JsonResponse({'looks' : looks})
+

@@ -33,7 +33,6 @@ urlpatterns = [
     path('home/', outfits_views.homepage, name='home'),
     path('profile/', outfits_views.profile, name='profile'),
     path('createLook/', outfits_views.updatelook, name='createLook'),
-    # path('createLook/', outfits_views.updatelook, name='createLook'),
     path('stylist/', outfits_views.stylist, name='stylist'),
     path('camera/', outfits_views.camera, name='camera'),
     path('buildLook/', outfits_views.buildlook, name='buildLook'),
@@ -41,6 +40,10 @@ urlpatterns = [
     path('upload/', outfits_views.image_upload_view, name='upload'),
     path('profile/profile', outfits_views.profileAfterchanges, name='profileAfterchanges'),
     path('profile/createLook', outfits_views.createplusLook, name='createplusLook'),
+    path('buildLook/stylistceartLook', outfits_views.stylistceartLook, name='stylistceartLook'),
+    path('buildLook/profile', outfits_views.profile, name='profile'),
+    path('buildLook/createLook', outfits_views.createplusLook, name='createplusLook'),
+    
 ]
 
 if settings.DEBUG:

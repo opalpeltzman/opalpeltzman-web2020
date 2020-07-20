@@ -27,7 +27,7 @@ var golfElement = document.getElementById("golftab");
 
 
 var lightbox1 = $("#myModal").modal("hide");
-// var lightbox1 = $("#deleteModal").modal("hide");
+
 
 document.getElementById("tops").onclick = function(){ 
   lightbox1.modal("show");

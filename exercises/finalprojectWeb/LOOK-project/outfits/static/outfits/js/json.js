@@ -1,6 +1,5 @@
 
 
-function getlookid
 
 
 

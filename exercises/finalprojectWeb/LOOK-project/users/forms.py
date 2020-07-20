@@ -12,5 +12,3 @@ class UserRegisterForm(UserCreationForm):
         fields = [ 'username', 'email','userType', 'password1', 'password2']
 
         
-
-# class UserLoginForm(UserCreationForm)

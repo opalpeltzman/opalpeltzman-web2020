@@ -37,6 +37,9 @@
 					<a class="nav-link" href="{% url 'stylist' %}">Find stylist</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="{% url 'buildLook' %}" >Build look</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="{% url 'profile' %}" id="selected">Profile</a>
 				</li>
 				<li class="nav-item">
@@ -51,7 +54,6 @@
 			<span class="note">my closet</span>
 			<section class="adaptive">
 				<section class="imageBorder">
-					<!-- <img src="{{ form.lookImg }}" width="371" height="453"> -->
 					<img src="{% static 'outfits/images/o6.jpg' %}">
 				</section>
 			</section>

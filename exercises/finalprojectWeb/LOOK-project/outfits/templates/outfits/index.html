@@ -35,6 +35,9 @@
                         <a class="nav-link" href="{% url 'stylist' %}">Find stylist</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'buildLook' %}" >Build look</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}" id="selected">Profile</a>
                     </li>
                     <li class="nav-item">
@@ -52,36 +55,9 @@
             </div>
 
             <section id="allLooks" class="outfitsImages">
-                <div>
+                <div id="hanger">
                     <div class="img_container">
                         <button><img  id="addOutfits" class="dynamic_image" src="{% static 'outfits/images/addOutfit.jpg' %}"></button>
-                    </div>
-                    <div class="img_container" id="c1">
-                        <button><img class="dynamic_image" src="{% static 'outfits/images/o4.png' %}" id="im1"></button>
-                        <section class="overlay" id="o2">
-                            <button id="Edit" type="button"
-                                class="btn btn-outline-secondary items tops ">Edit</button>
-                            <button id="delete" type="button"
-                                class="btn btn-outline-secondary items tops ">Delete</button>
-                        </section>
-                    </div>
-                    <div class="img_container">
-                        <button><img class="dynamic_image" src="{% static 'outfits/images/o4.png' %}" id="im2"></button>
-                        <section class="overlay" >
-                            <button id="Edit" type="button"
-                                class="btn btn-outline-secondary items tops ">Edit</button>
-                            <button id="delete" type="button"
-                                class="btn btn-outline-secondary items tops ">Delete</button>
-                        </section>
-                    </div>
-                    <div class="img_container">
-                        <button><img class="dynamic_image" src="{% static 'outfits/images/o6.jpg' %}" id="changeOutfit"></button>
-                        <section class="overlay" >
-                            <button id="Edit" type="button"
-                                class="btn btn-outline-secondary items tops ">Edit</button>
-                            <button id="delete" type="button"
-                                class="btn btn-outline-secondary items tops ">Delete</button>
-                        </section>
                     </div>
                 </div>
             </section>

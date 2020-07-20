@@ -1,65 +1,33 @@
-{
-    "items": [
+[
         {
-            "Userid": "13",
-            "Itemtype": "shirt",
-            "size": "30",
-            "color": "red",
-            "itemImg": "../images/shirt.png"
-        },
-        {
-            "Userid": "13",
-            "Itemtype": "pants",
-            "size": "26",
-            "color": "white",
-            "itemImg": "../images/pants.png"
-        },
-        {
-            "Userid": "13",
-            "Itemtype": "sport",
-            "size": "26",
-            "color": "black",
-            "itemImg": "../images/sport.png"
-        },
-        {
-            "Userid": "13",
-            "Itemtype": "dress",
-            "size": "30",
-            "color": "blue",
-            "itemImg": "../images/dress.jpeg"
-        }
-    ],
-    "looks": [
-        {
-            "userid":"13",
+            "userid":"18",
             "lookid":"1",
-            "img": "../images/o1"
+            "img": "../static/outfits/images/o1.png",
+            "imgid": "1"
             
         },
         {
-            "userid":"13",
-            "lookid":"1",
-            "img": "../images/o2"
-        },
-        {
-            "userid":"13",
+            "userid":"18",
             "lookid":"2",
-            "img": "../images/o3"
+            "img": "../static/outfits/images/o2.png",
+            "imgid": "2"
         },
         {
-            "userid":"13",
-            "lookid":"3",
-            "img": "../images/o4"
+            "userid":"18",
+            "lookid":"4",
+            "img": "../static/outfits/images/o4.png",
+            "imgid": "3"
         },
         {
-            "userid":"dana123",
-            "lookid":"1",
-            "img": "../images/o5"
+            "userid":"18",
+            "lookid":"5",
+            "img": "../static/outfits/images/o5.png",
+            "imgid": "4"
         },
         {
-            "userid":"dana123",
-            "lookid":"1",
-            "img": "../images/o6"
+            "userid":"17",
+            "lookid":"6",
+            "img": "../static/outfits/images/o6.jpg",
+            "imgid": "5"
         }
-    ]
-}
+]

@@ -34,9 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'home' %}">Home</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" id="selected" href="{% url 'buildLook' %}">Build LOOKS</a>
+                        <a class="nav-link" href="{% url 'stylist' %}">Find stylist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'buildLook' %}" id="selected" >Build look</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -58,7 +60,7 @@
                         <label><b>name:</b> guy sharir</label><br>
                         <label><b>description:</b></label>
                         <p>i need an outfit for a wedding next week. preferably dark colors and warm fabric</p>
-                        <div><button type="button" class="btn btn-secondary">build LOOK</button></div>
+                        <div><button id="goBuildlook" type="button" class="btn btn-secondary">build LOOK</button></div>
                     </div>
                     <div class="objects">
                         <label><b>name:</b> guy sharir</label><br>
@@ -125,7 +127,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="{% static 'outfits/js/main.js'%}"></script>
+    <script src="{% static 'outfits/js/stylist.js'%}"></script>
 </body>
 
 

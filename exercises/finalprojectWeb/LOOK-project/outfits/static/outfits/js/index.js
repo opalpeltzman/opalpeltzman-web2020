@@ -1,36 +1,10 @@
 
-var Edit = document.getElementById("Edit"),
-    show = document.getElementById("im1"),
-    overlay = document.getElementById("o2"),
-    confirmdel = document.getElementById("confirmdelete"),
-    container = document.getElementById("c1");
 
-show.onclick = function(){
-    if(overlay.style.display == "none")
-        overlay.style.display = "block"
-    else
-        overlay.style.display = "none"
-}
 
-overlay.onclick = function(){
-    if(overlay.style.display == "none")
-    overlay.style.display = "block"
-else
-    overlay.style.display = "none"
-}
+    var lightbox = $("#deleteModal").modal("hide"), overlays, myimgid;
+    document.getElementById("confirmdelete").onclick = function(){
 
-confirmdel.onclick = function(){
-    container.style.display = "none"
-    lightbox.modal("hide");
-}
-
-// delete modal
-
-var lightbox = $("#deleteModal").modal("hide");
-
-document.getElementById("delete").onclick = function () {
-    lightbox.modal("show");
-}
+    }
 
 
 
@@ -39,53 +13,47 @@ document.getElementById("addOutfits").onclick =function(){
 }
 
 
-// filter modal for looks
 
-// var lightbox1 = $("#filterModal").modal("hide");
-// document.getElementById("filter").onclick = function () {
-//     lightbox1.modal("show");
-// }
+$(document).ready(function(){
+    $.getJSON("../static/outfits/data/items.json",function(data){
+        $.each(data,function(key,value){
+            var link = `<div class="img_container" class='${value.imgid}'>
+            <button><img class="dynamic_image" onclick="showoverlay(${value.imgid})" src='${value.img}' id='${value.imgid}'></button>
+            <section class="overlay" onclick="showoverlay2(${value.imgid})">
+                <button id="Edit" type="button"
+                    class="btn btn-outline-secondary items tops "onclick="editlook()">Edit</button>
+                <button id="delete" type="button"
+                    class="btn btn-outline-secondary items tops" onclick="deletelook(${value.imgid})">Delete</button>
+            </section>
+            </div>`;
+            $("#hanger").append(link);
+        });
+    });
 
+    overlays = document.getElementsByClassName("overlay");
+});
 
-// document.getElementById("addOutfits").onclick =function(){
-//     window.location.href = "{{% url 'createLook' %}}"; 
-// }
+function editlook(){
+    window.location.href = "createLook"; 
+}
 
-// var lookid;
-// function lookid() {
-//     var akValue = window.location.search.substring(1).split('&');
-//         console.log(akValue)
-//         titleId = akValue[0].split("=")[1];
-//         console.log(titleId)
+    function deletelook(id){
+        lightbox.modal("show")
+        document.getElementById("confirmdelete").onclick = function(){
+            lightbox.modal("hide")
+        }
+    }
 
-//     return titleId;
-// }
+    function showoverlay(id){
+        if(overlays[id - 1].style.display == "none")
+            overlays[id- 1].style.display = "block";
+        else    
+            overlays[id - 1].style.display = "none"
+    }
 
-
-// $(document).ready(function(){
-//         $.getJSON('../../static/accounts/includes/data/forms.json', function(data) {
-//             var titleId = getFormId();
-//             console.log(titleId.value)
-//             $.each(data, function(key, value){
-//                 if(value.id == key)
-//                 //var title = "<h3>" + value.name + "</h3>";
-//                     ('#title').html(value);
-//         });   
-//     });
-// });
-
-// $(document).ready(function(){
-//     $.getJSON("json",function(data){
-//         var sHTML = "<ul>";
-
-//         $.each(data,function(key,value){
-//             console.log(val);
-//             sHTML += "<li><b>" + key + "</b>:...." + val + "</li>";
-//         });
-
-//         sHTML += "</ul>";
-//         console.log("sHTML :"+sHTML);
-//         $('#allLooks').append(sHTML);
-//     });
-// });
-
+    function showoverlay2(id){
+        if(overlays[id - 1].style.display == "none")
+            overlays[id- 1].style.display = "block";
+        else    
+            overlays[id - 1].style.display = "none"
+    }
