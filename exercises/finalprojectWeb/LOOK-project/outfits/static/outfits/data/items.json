@@ -1,0 +1,65 @@
+{
+    "items": [
+        {
+            "Userid": "13",
+            "Itemtype": "shirt",
+            "size": "30",
+            "color": "red",
+            "itemImg": "../images/shirt.png"
+        },
+        {
+            "Userid": "13",
+            "Itemtype": "pants",
+            "size": "26",
+            "color": "white",
+            "itemImg": "../images/pants.png"
+        },
+        {
+            "Userid": "13",
+            "Itemtype": "sport",
+            "size": "26",
+            "color": "black",
+            "itemImg": "../images/sport.png"
+        },
+        {
+            "Userid": "13",
+            "Itemtype": "dress",
+            "size": "30",
+            "color": "blue",
+            "itemImg": "../images/dress.jpeg"
+        }
+    ],
+    "looks": [
+        {
+            "userid":"13",
+            "lookid":"1",
+            "img": "../images/o1"
+            
+        },
+        {
+            "userid":"13",
+            "lookid":"1",
+            "img": "../images/o2"
+        },
+        {
+            "userid":"13",
+            "lookid":"2",
+            "img": "../images/o3"
+        },
+        {
+            "userid":"13",
+            "lookid":"3",
+            "img": "../images/o4"
+        },
+        {
+            "userid":"dana123",
+            "lookid":"1",
+            "img": "../images/o5"
+        },
+        {
+            "userid":"dana123",
+            "lookid":"1",
+            "img": "../images/o6"
+        }
+    ]
+}
